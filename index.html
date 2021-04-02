@@ -25,31 +25,75 @@
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css?h=5ef01a1d3ea555acf3dc221bf2ad88a9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css?h=7d30fefdbd7a749d262fc5c90f4fac8a">
+    <script src="./main.js"></script
+    <style>
+        .pointer{
+            cursor:pointer !important;
+        }
+    </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-</head>
+
 
 <body>
+<!-- Messenger Chat Plugin Code -->
+
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        appId            : '5201314116605973',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v10.0'
+        });
+    };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    </head>
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/tr_TR/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="108280978019731">
+      </div>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background: rgb(26,13,144) !important;">
         <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="background: #fadf14;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color: rgb(250,223,20);"></span></button><img src="assets/img/Logo.svg?h=7e29402fc4a30be9e9e04e1bcc71452f" style="width: 126px;">
             <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(250,223,20) !important;">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" style="padding-right: 15px;"></li>
-                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;"><a class="nav-link active" href="features.html" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">ana sayfa</a></li>
-                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;"><a class="nav-link" href="features.html" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">hakkinda</a></li>
-                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;"><a class="nav-link" href="service-page.html" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">servisler</a></li>
-                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;"><a class="nav-link" href="service-page.html" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">Bıze ulaşın</a></li>
+                    <li class="nav-item pointer" style="padding-right: 15px;margin-top: 10px;text-align: center;cursor:pointer !important;" onClick="scroll_to('anasayfa')"><a class="nav-link active" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">ana sayfa</a></li>
+                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;cursor:pointer !important;" onClick="scroll_to('hakkinda')"><a class="nav-link" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">hakkinda</a></li>
+                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;cursor:pointer !important;" onClick="scroll_to('servisler')"><a class="nav-link" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">servisler</a></li>
+                    <li class="nav-item" style="padding-right: 15px;margin-top: 10px;text-align: center;cursor:pointer !important;" onClick="scroll_to('neden_biz')"><a class="nav-link" style="background: #fadf14;border-top-left-radius: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px;border-bottom-left-radius: 7px;color: #1a0d90;margin-top: 10px;">Bıze ulaşın</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="color: rgba(9, 162, 255, 0.85);background: url(&quot;assets/img/tech/truck_01.jpg?h=56512b25763df98c72466c237cf6bc01&quot;) center / cover no-repeat;filter: saturate(0%);">
+        <section id="anasayfa" class="clean-block clean-hero" style="color: rgba(9, 162, 255, 0.85);background: url(&quot;assets/img/tech/truck_01.jpg?h=56512b25763df98c72466c237cf6bc01&quot;) center / cover no-repeat;filter: saturate(0%);">
             <div class="text">
                 <h2>SEFA NAKLİYAT</h2>
                 <p>Nakliyat hizmetleri sektöründe 10 yıldır hizmet veren firmamız siz müşterilerimizin sürekli tercih ettiği SEFA Evden Eve Nakliyat firması olmaktan gurur duyuyoruz.</p>
             </div>
         </section>
-        <section class="clean-block clean-info dark">
+        <section class="clean-block clean-info dark" id="hakkinda">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">HAKKINDA</h2>
@@ -65,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="clean-block features">
+        <section class="clean-block features" id="servisler">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Servisler</h2>
@@ -91,7 +135,7 @@
                 </div>
             </div>
         </section>
-        <section class="clean-block about-us" style="background: rgb(246,246,246);">
+        <section class="clean-block about-us" style="background: rgb(246,246,246);" id="neden_biz">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Neden bizi seçmelisiniz</h2>
